@@ -104,7 +104,11 @@
     <v-row no-gutters>
       <v-col>
         <v-sheet class="pa-2 ma-2">
-          .v-col-auto
+          <v-btn stacked color="indigo-darken-3"
+        size="large"
+        @click="dialog = !dialog">
+            Button Dialog
+          </v-btn>
         </v-sheet>
       </v-col>
       <v-col>
@@ -118,7 +122,23 @@
         </v-sheet>
       </v-col>
     </v-row>
-
+    <!-- dialog -->
+    <v-dialog
+      v-model="dialog"
+      width="40rem"
+      persistent
+    >
+    <!-- persistent es para que se quede aun cuando se da click fuera de el -->
+      <v-card>
+        <v-card-text>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </v-card-text>
+        <v-card-actions>
+          <v-btn color="primary" block @click="dialog = false">Close Dialog</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+    <!-- end dialog -->
     <v-row no-gutters>
       <v-col cols="2">
         <v-sheet class="pa-2 ma-2">
@@ -141,6 +161,7 @@
   data: () => ({
     show1: false,
     show: false,
+    dialog: false,
   }),
 }
 </script>
