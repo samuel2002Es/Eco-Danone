@@ -5,6 +5,8 @@ import store from './store'
 import vuetify from './plugins/vuetify'
 import { loadFonts } from './plugins/webfontloader'
 
+import { VueTextareaAutosize } from "vue-textarea-autosize";
+
 import { initializeApp } from "firebase/app";
 /* para utilizar bases de datos no relacionales en firebase utilizamos  */
 import 'firebase/firestore';
@@ -20,6 +22,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+export const db = firebase.firestore();
 
 loadFonts()
 
