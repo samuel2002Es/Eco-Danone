@@ -24,9 +24,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Grid.vue')
   },
   {
-    path: '/calendario',
-    name: 'calendario',
-    component: () => import('@/views/Calendario.vue')
+    path: '/productos',
+    name: 'productos',
+    component: () => import('@/views/Productos.vue')
   }
 ]
 

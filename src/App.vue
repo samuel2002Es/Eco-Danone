@@ -6,16 +6,10 @@
           :dark="true"
         >
           <v-app-bar-nav-icon @click="menu"></v-app-bar-nav-icon>
-          <v-toolbar-title>Title</v-toolbar-title>
+          <v-toolbar-title>Danone</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-btn icon>
-            <v-icon>mdi-magnify</v-icon>
-          </v-btn>
-          <v-btn icon>
             <v-icon>mdi-heart</v-icon>
-          </v-btn>
-          <v-btn icon>
-            <v-icon>mdi-dots-vertical</v-icon>
           </v-btn>
       </v-toolbar>
       <v-navigation-drawer
@@ -33,7 +27,7 @@
           <v-list-item prepend-icon="mdi-view-dashboard" title="Home" value="home" to="/"></v-list-item>
           <v-list-item prepend-icon="mdi-forum" title="About" value="about" to="/about"></v-list-item>
           <v-list-item prepend-icon="mdi-butterfly" title="grid" value="grid" to="/grid"></v-list-item>
-          <v-list-item prepend-icon="mdi-calendar" title="Calendario" value="Calendario" to="/calendario"></v-list-item>
+          <v-list-item prepend-icon="mdi-product" title="productos" value="Productos" to="/produtos"></v-list-item>
         </v-list>
       </v-navigation-drawer>
       <router-view/>
