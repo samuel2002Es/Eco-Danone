@@ -36,7 +36,7 @@
 </template>
 
 <script>
-
+import recipies from './data/index.js'
 export default {
   name: 'App',
 
@@ -47,6 +47,9 @@ export default {
     menu(){
       this.drawer=true
     }
-  }
+  },
+  created() {
+    console.log("hello")
+  },
 }
 </script>
