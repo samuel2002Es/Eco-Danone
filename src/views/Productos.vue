@@ -1,7 +1,7 @@
 <template>
     <h1 class="text-center">Productos</h1>
     <v-card-title>
-      buscar producto
+      buscar producto:
       <v-spacer></v-spacer>
       <v-text-field
         v-model="search"
@@ -69,6 +69,7 @@
   </v-container >
 </template>
 <script>
+import { mapState, mapMutations } from 'vuex'
 export default {
     data() {
         return {
@@ -84,6 +85,7 @@ export default {
         }
     },
     methods:{
+      ...mapMutations(['dataDB']),
         abrirCerrar(index){
             if(!this.revealP[index]){
                 this.revealP[index] = this.reveal
@@ -92,6 +94,11 @@ export default {
                 this.revealP[index] = !this.revealP[index]
             }          
         }
+    },
+    computed:{
+    },
+    beforeMount(){
+      this.dataDB
     }
 }
 </script>
