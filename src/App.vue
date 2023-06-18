@@ -9,7 +9,7 @@
           <v-toolbar-title>Danone</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-btn icon>
-            <v-icon>mdi-heart</v-icon>
+            <v-icon>mdi-account</v-icon>
           </v-btn>
       </v-toolbar>
       <v-navigation-drawer
@@ -27,7 +27,7 @@
           <v-list-item prepend-icon="mdi-view-dashboard" title="Home" value="home" to="/"></v-list-item>
           <v-list-item prepend-icon="mdi-forum" title="About" value="about" to="/about"></v-list-item>
           <v-list-item prepend-icon="mdi-butterfly" title="grid" value="grid" to="/grid"></v-list-item>
-          <v-list-item prepend-icon="mdi-product" title="productos" value="Productos" to="/produtos"></v-list-item>
+          <v-list-item prepend-icon="mdi-bottle-soda" title="productos" value="Productos" to="/productos"></v-list-item>
         </v-list>
       </v-navigation-drawer>
       <router-view/>
