@@ -1,6 +1,6 @@
 import { createClient } from "contentful";
 
-export async function getstaticProps(){
+async function getstaticProps(){
 
     const client = createClient({
         space: "u4pwhy3gvhh8",
@@ -10,14 +10,12 @@ export async function getstaticProps(){
         //accessToken: process.env.CONTENTFUL_ACCESSS_KEY
     })
 
-    const res = await client.getEntries({ content_type: 'recipe'})
-
-    return {
-        props: {
-            recipies: res.items
-        }
+    client.getEntries().then(function (entries) {
+  // log the title for all the entries that have it
+  entries.items.forEach(function (entry) {
+    if (entry.fields) {
+      console.log(entry);
     }
-}
-export default function Recipies({ recipies }){
-    console.log(recipies)
+  });
+});
 }
