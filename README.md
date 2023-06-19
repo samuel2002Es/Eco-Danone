@@ -11,6 +11,16 @@ He creado la siguiente pagina [Danone Eco](https://master--incandescent-fairy-64
 He seguido las reglas utilizando como backend contentful que es unHeadless CMS lo utilice como gestor de contenido
 
 ![Screenshot de mi backend](./imagesPrueba/imagenBack.png)
+Y posterior a esto lo consumo desde el store de vue esto con el fin de que se guarde en cache, tambien tengo claro que no se deberia de ver el space ni el token, si no que mediante variables de entorno ahi se deberian establecer, en fin, lo deje asi para que fuese comprobable el consumo real y si quieren pueden ver mis tablas hechas en contentful.
+![Screenshot de mi backend](./imagesPrueba/consumoBack.png)
+
+Dentro de mi front para el home utilice buenas practicas generando componentes reutilizables como lo serian mis productos.
+![Screenshot de home](./imagesPrueba/home.png)
+
+Para el front genere unas rutas que me permitieran viajar atraves de las views.
+![Screenshot de rutas](./imagesPrueba/rutas.png)
+
+
 
 ## Project setup
 ```
