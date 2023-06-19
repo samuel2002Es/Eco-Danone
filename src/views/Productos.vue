@@ -14,7 +14,7 @@
     <v-container>
     <v-row no-gutters>
       <v-col
-      v-for="item, index in datosPrueba" :key="item.id"
+      v-for="item, index in items" :key="item.id"
         cols="12"
         sm="4"
       >
@@ -70,6 +70,9 @@
       </v-expand-transition>
     </v-card>
       </v-col>
+
+
+
     </v-row>
   </v-container >
 </template>
@@ -78,6 +81,7 @@ import { mapState, mapMutations } from 'vuex'
 export default {
     data() {
         return {
+            arrayM: [],
             search: '',
             reveal: false,
             revealP: {},
@@ -92,15 +96,32 @@ export default {
             }else{
                 this.revealP[index] = !this.revealP[index]
             }          
-        }
+        },
     },
     computed:{
-      ...mapState(['datosPrueba'])
+      ...mapState(['datosPrueba']),
+      items(){
+        if(!this.search){
+          return this.datosPrueba
+        }else{
+          return this.datosPrueba.filter(item => {
+            return item.fields.nombre.toLowerCase().includes(this.search.toLowerCase())
+          })
+        }
+          /* return this.datosPrueba.filter(item =>{
+            return item.fields.nombre.toLowerCase().includes(this.search.toLowerCase()) */
+          //console.log(item.fields.nombre.toLowerCase())
+          //console.log(this.search.toLowerCase())
+        /* }) */
+        /* return this.datosPrueba.filter(item=>{
+          return item.fields.nombre.toLowerCase().includes(this.search.toLowerCase())
+        }) */
+      }
     },
     beforeMount(){
       //this.dataDB()
       //console.log(this.dataDB())
       this.obtenerDB()
-    }
+    },
 }
 </script>
