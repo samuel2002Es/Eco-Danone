@@ -10,7 +10,7 @@ He creado la siguiente pagina [Danone Eco](https://master--incandescent-fairy-64
 
 He seguido las reglas utilizando como backend contentful que es unHeadless CMS lo utilice como gestor de contenido
 
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
+![Screenshot de mi backend](./imagesPrueba/imagenBack.png)
 
 ## Project setup
 ```
