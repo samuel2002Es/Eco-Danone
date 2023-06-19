@@ -1,6 +1,6 @@
 <template>
  <v-container >
-  <h1 class="text-center mb-5"> Danone Eco</h1>
+  <div class="text-center heading1 text-h1 mb-10 mt-5">Danone Eco</div>
     <v-row no-gutters>
       <v-col>
         <es-danone></es-danone>
@@ -28,7 +28,7 @@ import ProductosCard from '@/components/ProductosCard.vue';
   components: {
     EsDanone,
     ProductosCard
-  }
+  },
 }
 /* import calendarioC from "../components/CalendarioComp.vue";
 export default {
